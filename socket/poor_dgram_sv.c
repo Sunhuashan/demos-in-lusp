@@ -2,7 +2,7 @@
 
 static void help(void)
 {
-    printf("Usage: poor_dgram_cl port\n");
+    printf("Usage: server port\n");
     exit(-1);
 }
 
@@ -57,9 +57,11 @@ int main(int argc, char *argv[])
 
         msg[msglen] = '\0';
         printf("recive message \"%s\"\n", msg);
+        free(msg);
     }
 
 out:
     close(sockfd);
+    free(msg);
     return retval;
 }

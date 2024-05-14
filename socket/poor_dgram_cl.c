@@ -2,7 +2,7 @@
 
 static void help(void)
 {
-    printf("Usage: poor_dgram_cl HOST SERVICE message\n");
+    printf("Usage: client HOST SERVICE message\n");
     exit(-1);
 }
 
